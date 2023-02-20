@@ -1,0 +1,30 @@
+{parameters
+    Kirby\Cms\Block $block,
+    string $class = 'gallery'
+}
+
+{var $images = $block->images()->toFiles()}
+{var $caption = $block->caption()}
+{var $ratio = $block->ratio()->or('auto')->toString()}
+{var $crop = $block->crop()->toBool()}
+
+<figure n:class="$class" n:tag-if="$images->isNotEmpty() && $caption">
+
+    <div n:class="$class . '__row'" style="--columns: {$block->columns()->toInt()}">
+        {foreach $images as $image}
+            <div n:class="$class . '__col'">
+                {include '@components/image.latte',
+                    file: $image,
+                    ratio: $ratio,
+                    crop: $crop,
+                    class: $class . '__img'
+                }
+            </div>
+        {/foreach}
+    </div>
+
+    <figcaption n:class="$class . '__caption'" n:if="$caption">
+        {$caption}
+    </figcaption>
+
+</figure>

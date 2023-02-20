@@ -1,0 +1,14 @@
+{parameters
+    Kirby\Cms\Block $block
+}
+
+{var $iframe = Kirby\Cms\Html::video($block->url())}
+
+<figure n:tag-if="$block->caption()->isNotEmpty()">
+    <div class="video-wrapper" n:if="$iframe">
+        {$iframe|noescape}
+    </div>
+    <figcaption n:if="$block->caption()->isNotEmpty()">
+        {$block->caption()->toHtml()}
+    </figcaption>
+</figure>

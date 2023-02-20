@@ -1,0 +1,53 @@
+name: field.blocks.gallery.name
+
+icon: dashboard
+
+preview: gallery
+
+fields:
+    images:
+        label: field.blocks.gallery.images.label
+        type: files
+        query: model.images
+        multiple: true
+        layout: cards
+        size: tiny
+        empty: field.blocks.gallery.images.empty
+        uploads:
+            template: image
+        image:
+            ratio: 1/1
+    gap:
+        type: gap
+    columns:
+        label:
+            en: Number of Columns
+            cs: Počet sloupců
+        type: select
+        required: true
+        default: 4
+        options:
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+    caption:
+        extends: fields/caption
+    ratio:
+        label: field.blocks.image.ratio
+        type: select
+        placeholder: Auto
+        width: 1/2
+        options:
+            1/1: "1:1"
+            4/3: "4:3"
+            3/2: "3:2"
+            16/9: "16:9"
+    crop:
+        label: field.blocks.image.crop
+        type: toggle
+        default: true
+        width: 1/2
+

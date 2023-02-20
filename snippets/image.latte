@@ -1,0 +1,24 @@
+{parameters
+    Kirby\Cms\Block $block
+}
+
+{var $image = $block->image()->toFile()}
+{var $caption = $block->caption()->or($image?->caption())->toHtml()}
+{var $alt = $block->alt()->isNotEmpty() ? $block->alt() : $image?->alt()}
+{var $link  = $block->link()->toLinkObject()}
+{var $ratio = $block->ratio()->or('auto')->toString()}
+{var $crop = $block->crop()->toBool()}
+
+<figure n:tag-if="$image && $caption">
+    <a href="{$link->url()}" n:tag-if="$link->isNotEmpty()">
+        {include '@components/image.latte',
+            file: $image,
+            alt: $alt,
+            ratio: $ratio,
+            crop: $crop
+        }
+    </a>
+    <figcaption n:if="$caption">
+        {$caption}
+    </figcaption>
+</figure>

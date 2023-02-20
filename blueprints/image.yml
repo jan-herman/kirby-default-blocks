@@ -1,0 +1,33 @@
+name: field.blocks.image.name
+
+icon: image
+
+preview: image
+
+fields:
+    image:
+        extends: fields/image
+        query: model.images
+    gap:
+        type: gap
+    caption:
+        extends: fields/caption
+    alt:
+        extends: fields/alt
+    link:
+        extends: fields/link
+    ratio:
+        label: field.blocks.image.ratio
+        type: select
+        placeholder: Auto
+        width: 1/2
+        options:
+            1/1: "1:1"
+            4/3: "4:3"
+            3/2: "3:2"
+            16/9: "16:9"
+    crop:
+        label: field.blocks.image.crop
+        type: toggle
+        default: true
+        width: 1/2

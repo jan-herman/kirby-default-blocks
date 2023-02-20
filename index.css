@@ -1,0 +1,4 @@
+/* Image Block - Remove height restrictions */
+.k-block-type-image-auto{
+    max-height: none;
+}
