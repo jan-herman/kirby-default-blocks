@@ -3,12 +3,13 @@
     string $class = 'gallery'
 }
 
-{var $images = $block->images()->toFiles()}
-{var $caption = $block->caption()}
-{var $ratio = $block->ratio()->or('auto')->toString()}
-{var $crop = $block->crop()->toBool()}
+{var $images  = $block->images()->toFiles()}
+{var $caption = $block->caption()->toHtml()}
+{var $ratio   = $block->ratio()->or('auto')->toString()}
+{var $crop    = $block->crop()->toBool()}
 
-<figure n:class="$class" n:tag-if="$images->isNotEmpty() && $caption">
+
+<figure n:class="$class">
 
     <div n:class="$class . '__row'" style="--columns: {$block->columns()->toInt()}">
         {foreach $images as $image}
