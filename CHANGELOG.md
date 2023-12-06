@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.0] - 2023-12-06
+### Added
+- Kirby 4.0 as a requirement
+
+### Removed
+- heading blueprint (was implemented in Kirby core)
+
+
 ## [1.0.2] - 2023-02-24
 ### Fixed
 - Gallery collumns option would not accept integers as values.

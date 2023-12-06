@@ -1,7 +1,7 @@
 {
     "name": "jan-herman/kirby-default-blocks",
     "description": "Opinionated modifications of the default Kirby blocks.",
-    "version": "1.0.2",
+    "version": "2.0.0",
     "type": "kirby-plugin",
     "license": "MIT",
     "homepage": "https://github.com/jan-herman/kirby-default-blocks",
@@ -14,9 +14,10 @@
     ],
     "require": {
         "php": "^8.1",
+        "getkirby/cms": "^4.0",
         "getkirby/composer-installer": "^1.2",
         "jan-herman/kirby-barista": "^1.0",
-        "jan-herman/kirby-shared-blueprints": "^1.0"
+        "jan-herman/kirby-shared-blueprints": "^2.0"
     },
     "extra": {
 		"installer-name": "default-blocks"
