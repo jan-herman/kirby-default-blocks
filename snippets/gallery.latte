@@ -14,7 +14,7 @@
     <div n:class="$class . '__row'" style="--columns: {$block->columns()->toInt()}">
         {foreach $images as $image}
             <div n:class="$class . '__col'">
-                {include '@components/image.latte',
+                {image
                     file: $image,
                     ratio: $ratio,
                     crop: $crop,

@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.0.1] - 2024-02-01
+### Fixed
+- bugs in spippets
+
+
 ## [2.0.0] - 2023-12-06
 ### Added
 - Kirby 4.0 as a requirement
