@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.0.2] - 2025-04-07
+### Fixed
+- missing media library images in image picker
+
+
 ## [2.0.1] - 2024-02-01
 ### Fixed
 - bugs in spippets

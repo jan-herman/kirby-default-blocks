@@ -7,7 +7,7 @@ preview: image
 fields:
     image:
         extends: fields/image
-        query: model.images
+        query: model.images.add(site.find('media-library').images.filterBy('template', 'image'))
     gap:
         type: gap
     caption:

@@ -8,7 +8,7 @@ fields:
     images:
         label: field.blocks.gallery.images.label
         type: files
-        query: model.images
+        query: model.images.add(site.find('media-library').images.filterBy('template', 'image'))
         multiple: true
         layout: cards
         size: tiny
