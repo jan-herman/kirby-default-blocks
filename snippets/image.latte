@@ -17,7 +17,8 @@
             file: $image,
             alt: $alt,
             ratio: $ratio,
-            crop: $crop
+            object_fit: $crop ? 'cover' : 'contain',
+            fit: $crop ? 'cover' : 'contain',
         }
     </a>
 

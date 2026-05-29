@@ -17,7 +17,8 @@
                 {image
                     file: $image,
                     ratio: $ratio,
-                    crop: $crop,
+                    object_fit: $crop ? 'cover' : 'contain',
+                    fit: $crop ? 'cover' : 'contain',
                     class: $class . '__img'
                 }
             </div>
