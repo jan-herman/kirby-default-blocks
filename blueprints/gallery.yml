@@ -41,13 +41,14 @@ fields:
         placeholder: Auto
         width: 1/2
         options:
-            1/1: "1:1"
-            4/3: "4:3"
-            3/2: "3:2"
-            16/9: "16:9"
+            4/3: '4:3'
+            3/2: '3:2'
+            16/9: '16:9'
+            1/1: '1:1'
+            2/3: '2:3'
+            3/4: '3:4'
     crop:
         label: field.blocks.image.crop
         type: toggle
         default: true
         width: 1/2
-

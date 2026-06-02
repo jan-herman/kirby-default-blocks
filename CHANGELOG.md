@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.2.0] - 2026-06-02
+## Added
+- Portratit formats to the image & gallery blueprints
+
+
 ## [2.1.0] - 2025-07-21
 ### Added
 - Kirby 5 compatibility
